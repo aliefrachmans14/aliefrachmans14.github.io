@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #F3F8FC;
+    overflow-x: hidden;
+}
+
+
+/* RESPONSIVE VERSION */
+
+
+/* NAVBAR */
+
+.navbar {
+    /* background-color: #F3F8FC; */
+    top: 0;
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link.active:focus,
+.navbar .navbar-nav .nav-link.active:focus::after {
+    font-weight: 500;
+}
+
+.navbar-brand img {
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.nav-link {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.floatingNav {
+    border-radius: 2px;
+    box-shadow: 0px 1px 10px #999;
+}
+
+.navbar.bg {
+    background-color: #F3F8FC;
+}
+
+.navbar .navbar-collapse .navbar-nav a {
+    color: #486189;
+    font-weight: 400;
+}
+
+
+/* JUMBOTRON */
+
+.jumbotron {
+    /* margin-top: 82px; */
+    background-image: url(/Assets/img/jumbotron-11.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0px -300px;
+    height: 200px;
+    border-radius: unset;
+    overflow: hidden;
+}
+
+.jumbo {
+    display: flex;
+    justify-content: center;
+}
+
+.jumbo h2 {
+    font-weight: bold;
+    color: #486189;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 28px;
+    margin: 70px auto;
+    text-align: center;
+}
+
+
+/* CONTACT */
+
+.contact-heading {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.contact-heading h2 {
+    font-weight: bold;
+    font-family: 'Work Sans', sans-serif;
+    color: #486189;
+    font-size: 28px;
+}
+
+.contact-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.contact-info h5 {
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    padding: 30px 0;
+}
+
+.category h6 {
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    color: #486189;
+}
+
+.category p {
+    font-family: 'Open Sans', sans-serif;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.contact-right {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.col.contact-left,
+.col.contact-right {
+    opacity: 0;
+    transition: 1s;
+}
+
+.col.contact-left {
+    transform: translate(-50px, 0);
+}
+
+.col.contact-right {
+    transform: translate(50px, 0);
+}
+
+.col.contact-left.show,
+.col.contact-right.show {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+
+/* FOOTER */
+
+.footer {
+    background-color: #486189;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.footer h3 {
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    letter-spacing: .2em;
+}
+
+
+/* DESKTOP VERSION */
+
+@media (min-width: 992px) {
+    /* NAVBAR */
+    .nav-link {
+        margin-right: 30px;
+    }
+    .nav-link:last-of-type {
+        margin-right: 0;
+    }
+    .nav-link:hover::after {
+        content: '';
+        display: block;
+        border-bottom: 3px solid #486189;
+        width: 50%;
+        margin: auto;
+        padding-bottom: 5px;
+        margin-bottom: -8px;
+    }
+    .navbar .navbar-nav .nav-link.active,
+    .navbar .navbar-nav .nav-link.active:focus,
+    .navbar .navbar-nav .nav-link.active:focus::after {
+        content: '';
+        display: block;
+        border-bottom: 3px solid #486189;
+        font-weight: 500;
+        margin: auto;
+        padding-bottom: 5px;
+        margin-right: 30px;
+        /* margin-bottom: -8px; */
+        /* width: 100%; */
+    }
+    /* JUMBOTRON */
+    .jumbotron {
+        height: 350px;
+    }
+    .jumbo h2 {
+        font-size: 52px;
+        margin: 160px auto;
+    }
+    /* CONTACT */
+    .contact-heading {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+    .contact-heading h2 {
+        font-size: 32px;
+    }
+    .contact-body {
+        justify-content: space-between;
+        margin-bottom: 100px;
+        flex-direction: row;
+    }
+    .contact-left {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+    .contact-right {
+        justify-content: right;
+        flex-direction: row-reverse;
+    }
+    .category {
+        margin: 5px 0;
+    }
+}

@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #F3F8FC;
+    overflow-x: hidden;
+}
+
+
+/* RESPONSIVE VERSION */
+
+
+/* NAVBAR */
+
+.navbar {
+    /* background-color: #F3F8FC; */
+    top: 0;
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link.active:focus,
+.navbar .navbar-nav .nav-link.active:focus::after {
+    font-weight: 500;
+}
+
+.navbar-brand img {
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.nav-link {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.floatingNav {
+    border-radius: 2px;
+    box-shadow: 0px 1px 10px #999;
+}
+
+.navbar.bg {
+    background-color: #F3F8FC;
+}
+
+.navbar .navbar-collapse .navbar-nav a {
+    color: #486189;
+    font-weight: 400;
+}
+
+
+/* JUMBOTRON */
+
+.jumbotron {
+    /* margin-top: 82px; */
+    background-image: url(/Assets/img/jumbotron-7.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0px -800px;
+    height: 200px;
+    border-radius: unset;
+    overflow: hidden;
+}
+
+.jumbo {
+    display: flex;
+    justify-content: center;
+}
+
+.jumbo h2 {
+    font-weight: bold;
+    color: #486189;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 28px;
+    margin: 70px auto;
+    text-align: center;
+}
+
+
+/* PORTFOLIO */
+
+.row-enam-heading {
+    display: flex;
+    justify-content: center;
+}
+
+.row-enam-heading h2 {
+    font-weight: bold;
+    font-family: 'Work Sans', sans-serif;
+    color: #486189;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-size: 28px;
+}
+
+.thumbnail {
+    position: relative;
+    width: 60%;
+    border-radius: 6%;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-transition: box-shadow 0.35s ease;
+    transition: box-shadow 0.35s ease;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+}
+
+.gallery {
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px auto;
+}
+
+.thumbnail__container {
+    opacity: 0;
+    transform: translate(0, -40px);
+    transition: .5s;
+}
+
+.thumbnail__container.show {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+
+/* FOOTER */
+
+.footer {
+    background-color: #486189;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.footer h3 {
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    letter-spacing: .2em;
+}
+
+
+/* DESKTOP VERSION */
+
+@media (min-width: 992px) {
+    /* NAVBAR */
+    .nav-link {
+        margin-right: 30px;
+    }
+    .nav-link:last-of-type {
+        margin-right: 0;
+    }
+    .nav-link:hover::after {
+        content: '';
+        display: block;
+        border-bottom: 3px solid #486189;
+        width: 50%;
+        margin: auto;
+        padding-bottom: 5px;
+        margin-bottom: -8px;
+    }
+    .navbar .navbar-nav .nav-link.active,
+    .navbar .navbar-nav .nav-link.active:focus,
+    .navbar .navbar-nav .nav-link.active:focus::after {
+        content: '';
+        display: block;
+        border-bottom: 3px solid #486189;
+        font-weight: 500;
+        margin: auto;
+        padding-bottom: 5px;
+        margin-right: 30px;
+        /* margin-bottom: -8px; */
+        /* width: 100%; */
+    }
+    /* JUMBOTRON */
+    .jumbotron {
+        height: 350px;
+    }
+    .jumbo h2 {
+        font-size: 52px;
+        margin: 160px auto;
+    }
+    /* PORTFOLIO */
+    .row-enam-heading h2 {
+        font-size: 32px;
+    }
+    .gallery {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin: 100px auto;
+    }
+    .thumbnail {
+        position: relative;
+        width: 30%;
+        border-radius: 6%;
+        box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.8);
+        overflow: hidden;
+        cursor: pointer;
+        -webkit-transition: box-shadow 0.35s ease;
+        transition: box-shadow 0.35s ease;
+        margin: 20px 0;
+        /* Hover transition */
+    }
+}
