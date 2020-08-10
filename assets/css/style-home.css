@@ -280,6 +280,25 @@ body {
     color: #627AA6;
 }
 
+.mySkill-heading,
+.col.srv-heading,
+.timeline-heading,
+.row-enam-heading,
+.row.contact-heading {
+    opacity: 0;
+    transform: translate(0, -40px);
+    transition: .5s;
+}
+
+.row.mySkill-heading.show,
+.col.srv-heading.show,
+.timeline-heading.show,
+.row-enam-heading.show,
+.row.contact-heading.show {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
 .col.design,
 .col.coding {
     opacity: 0;

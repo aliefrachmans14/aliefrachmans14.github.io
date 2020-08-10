@@ -176,7 +176,8 @@ body {
 
 .col.edu,
 .col.exp,
-.col.org {
+.col,
+.mySkill-heading {
     opacity: 0;
     transform: translate(0, -40px);
     transition: .5s;
@@ -184,7 +185,8 @@ body {
 
 .col.edu.show,
 .col.exp.show,
-.col.org.show {
+.col.org.show,
+.row.mySkill-heading.show {
     opacity: 1;
     transform: translate(0, 0);
 }

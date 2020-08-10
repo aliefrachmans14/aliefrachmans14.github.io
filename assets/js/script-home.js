@@ -25,6 +25,11 @@ $(window).scroll(function() {
                 $('.card.card-service').eq(i).addClass('show');
             }, 300 * (i + 1))
         })
+        $('.col.srv-heading').each(function(i) {
+            setTimeout(function() {
+                $('.col.srv-heading').eq(i).addClass('show');
+            }, 300 * (i + 1))
+        })
     }
 
     // PORTFOLIO
@@ -32,6 +37,11 @@ $(window).scroll(function() {
         $('.thumbnail__container').each(function(i) {
             setTimeout(function() {
                 $('.thumbnail__container').eq(i).addClass('show');
+            }, 300 * (i + 1))
+        })
+        $('.row-enam-heading').each(function(i) {
+            setTimeout(function() {
+                $('.row-enam-heading').eq(i).addClass('show');
             }, 300 * (i + 1))
         })
     }
@@ -46,17 +56,32 @@ $(window).scroll(function() {
     if (wScroll > $('.row.mySkill-heading').offset().top - 350) {
         $('.col.design').addClass('show');
         $('.col.coding').addClass('show');
+        $('.row.mySkill-heading').each(function(i) {
+            setTimeout(function() {
+                $('.row.mySkill-heading').eq(i).addClass('show');
+            }, 300 * (i + 1))
+        })
     }
 
     // MY EXP
     if (wScroll > $('.timeline-heading').offset().top - 350) {
         $('.direction-r').addClass('show');
         $('.direction-l').addClass('show');
+        $('.timeline-heading').each(function(i) {
+            setTimeout(function() {
+                $('.timeline-heading').eq(i).addClass('show');
+            }, 300 * (i + 1))
+        })
     }
 
     // CONTACT
     if (wScroll > $('.row.contact-heading').offset().top - 350) {
         $('.col.contact-left').addClass('show');
         $('.col.contact-right').addClass('show');
+        $('.row.contact-heading').each(function(i) {
+            setTimeout(function() {
+                $('.row.contact-heading').eq(i).addClass('show');
+            }, 300 * (i + 1))
+        })
     }
 });

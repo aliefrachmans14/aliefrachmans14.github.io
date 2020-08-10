@@ -12,6 +12,11 @@ $(window).scroll(function() {
     if (wScroll > $('.row.mySkill-heading').offset().top - 350) {
         $('.col.design').addClass('show');
         $('.col.coding').addClass('show');
+        $('.row.mySkill-heading').each(function(i) {
+            setTimeout(function() {
+                $('.row.mySkill-heading').eq(i).addClass('show');
+            }, 300 * (i + 1))
+        })
     }
 
     // EDUCATION, EXPERIENCE, ORGANIZATION
